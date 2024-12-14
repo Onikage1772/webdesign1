@@ -1,0 +1,216 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.marquee {
+    width: 100%;
+    overflow: hidden;
+    background-color: #d4ed59;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    line-height: 0;
+}
+
+.marquee p {
+    display: inline-block;
+    padding-left: 100%;
+    animation: marquee 10s linear infinite;
+    white-space: nowrap;
+    color: #e73b3b;
+}
+
+@keyframes marquee {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0%);
+    }
+}
+
+.container {
+    display: flex;
+    margin: 20px;
+}
+
+.sidebar {
+    flex: 1;
+    padding: 20px;
+    background-color: #222222;
+    color: white;
+    border-radius: 10px;
+}
+
+.menu p {
+    margin: 10px 0;
+    cursor: pointer;
+    padding: 10px;
+    border-bottom: 2px solid rgb(6, 43, 212);
+    transition: background-color 0.3s ease;
+}
+
+.menu p:hover {
+    background-color: #fd35cb;
+}
+
+.login-container {
+    width: 300px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: white;
+    position: relative;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-header {
+    position: absolute;
+    top: -15px;
+    left: 20px;
+    background: white;
+    padding: 0 10px;
+    font-weight: bold;
+    font-size: 18px;
+    color: #333;
+}
+
+.login-form label {
+    display: block;
+    margin: 10px 0 5px;
+    font-size: 14px;
+    color: #333;
+}
+
+.login-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.login-form button {
+    width: 32%;
+    padding: 10px;
+    background-color: #00bfff;
+    color: rgb(234, 255, 47);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    text-align: left;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.login-form button:hover {
+    background-color: #0099cc;
+}
+
+.main-content {
+    flex: 3;
+    padding: 20px;
+}
+
+.image-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.image-container {
+    position: relative;
+    width: 32%;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: transform 0.3s;
+}
+
+.image-container:hover img {
+    transform: scale(1.05);
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.overlay h3 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.overlay p {
+    margin: 10px 0;
+    font-size: 18px;
+    color: yellow;
+}
+
+.overlay button {
+    padding: 10px 20px;
+    background-color: orange;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    font-size: 16px;
+}
+
+.image-container:hover .overlay {
+    opacity: 1;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #313131;
+}
+
+.footer-column {
+    flex: 1;
+    padding: 20px;
+    color: #ffffff;
+}
+
+.footer-column p {
+    margin: 5px 0;
+}
+
+.footer-column ul {
+    padding: 0;
+    list-style: none;
+}
